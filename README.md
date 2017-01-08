@@ -47,3 +47,6 @@ The script configure in /etc/telegraf/telegraf.conf or in single file (exp.: /et
   data_format = "influx"
 ```
 Restart Telegraf
+
+
+Example Picture from my Grafana : https://github.com/kenael/BananaPITempPower/wiki/Example-Picture-from-Grafana-Dashboard
