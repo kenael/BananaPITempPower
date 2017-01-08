@@ -5,25 +5,29 @@ You can use with Telegraf from Influxdata
 ## requirement
 OS: Bananian
 
-```apt install sudo```
+```
+apt install sudo
+```
 
 Follow Entry in /etc/sudoers or /etc/sudoers.d/<File> :
 
-```Cmnd_Alias  SOCTEMP=/usr/sbin/soctemp
-telegraf  ALL=NOPASSWD: SOCTEMP```
+```
+Cmnd_Alias  SOCTEMP=/usr/sbin/soctemp
+telegraf  ALL=NOPASSWD: SOCTEMP
+```
 
 ## Install 
 
 copy stats.sh to /usr/local/bin/
 
-```cp stats.sh /usr/local/bin
+```
+cp stats.sh /usr/local/bin
 chmod +x /usr/local/bin/stats.sh
-´´´
-
+```
 The script configure in /etc/telegraf/telegraf.conf or in single file (exp.: /etc/telegraf/telegraf.d/exec.conf)
 
-Example:
-´´´
+*Example:*
+```
 [[inputs.exec]]
   ## Commands array
   commands = [
@@ -41,7 +45,5 @@ Example:
   ## more about them here:
   ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
   data_format = "influx"
-´´´
-
-
+```
 Restart Telegraf
